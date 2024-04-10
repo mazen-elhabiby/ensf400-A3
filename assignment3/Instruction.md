@@ -39,13 +39,15 @@ Testing Load Balancer
 curl http://$(minikube ip)/
 ```
 Output:
+
 ![](OutputTest1.png)
 
-Testing Direct App Acess
+Testing App Access Directly
 ```bash
 curl http://$(minikube ip)/app
 ```
 Output:
+
 ![](OutputTest2.png)
 
 ## Cleanup
