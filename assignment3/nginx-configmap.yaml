@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  default.conf:
+    upstream backend {
+      server svc-app-1:8080;
+      server svc-app-2:8080;
+    }
+
+    server {
+      listen 80;
+      location / {
+        proxy_pass http://backend;
+      }
+    }
